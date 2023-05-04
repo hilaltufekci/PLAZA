@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="apimvcuygulamaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bloklar">
+          <Key>
+            <PropertyRef Name="BlokNo" />
+          </Key>
+          <Property Name="BlokNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BlokAdi" Type="varchar" MaxLength="50" />
+          <Property Name="BlokSayisi" Type="int" />
+        </EntityType>
+        <EntityType Name="Görevler">
+          <Key>
+            <PropertyRef Name="GörevNo" />
+          </Key>
+          <Property Name="GörevNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GörevTanimi" Type="varchar" MaxLength="50" />
+          <Property Name="Vardiya" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Hizmetler">
+          <Key>
+            <PropertyRef Name="HizmetNo" />
+          </Key>
+          <Property Name="HizmetNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HizmetAdi" Type="varchar" MaxLength="50" />
+          <Property Name="HizmetSüresi" Type="int" />
+        </EntityType>
+        <EntityType Name="Kullanicilar">
+          <Key>
+            <PropertyRef Name="KullaniciNo" />
+          </Key>
+          <Property Name="KullaniciNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KullaniciAdi" Type="varchar" MaxLength="50" />
+          <Property Name="Sifre" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Personeller">
+          <Key>
+            <PropertyRef Name="PersonelNo" />
+          </Key>
+          <Property Name="PersonelNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PersonelAdi" Type="varchar" MaxLength="50" />
+          <Property Name="PersonelSoyad" Type="varchar" MaxLength="50" />
+          <Property Name="PersonelYas" Type="int" />
+        </EntityType>
+        <EntityType Name="Plazalar">
+          <Key>
+            <PropertyRef Name="PlazaNo" />
+          </Key>
+          <Property Name="PlazaNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PlazaAdi" Type="varchar" MaxLength="50" />
+          <Property Name="PlazaKatSayisi" Type="int" />
+          <Property Name="Il" Type="varchar" MaxLength="50" />
+          <Property Name="Ilce" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="apimvcuygulamaModelStoreContainer">
+          <EntitySet Name="Bloklar" EntityType="Self.Bloklar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Görevler" EntityType="Self.Görevler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hizmetler" EntityType="Self.Hizmetler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kullanicilar" EntityType="Self.Kullanicilar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personeller" EntityType="Self.Personeller" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Plazalar" EntityType="Self.Plazalar" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="apimvcuygulamaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Bloklar">
+          <Key>
+            <PropertyRef Name="BlokNo" />
+          </Key>
+          <Property Name="BlokNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BlokAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="BlokSayisi" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Görevler">
+          <Key>
+            <PropertyRef Name="GörevNo" />
+          </Key>
+          <Property Name="GörevNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GörevTanimi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Vardiya" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Hizmetler">
+          <Key>
+            <PropertyRef Name="HizmetNo" />
+          </Key>
+          <Property Name="HizmetNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HizmetAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HizmetSüresi" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Kullanicilar">
+          <Key>
+            <PropertyRef Name="KullaniciNo" />
+          </Key>
+          <Property Name="KullaniciNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Personeller">
+          <Key>
+            <PropertyRef Name="PersonelNo" />
+          </Key>
+          <Property Name="PersonelNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PersonelAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PersonelSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PersonelYas" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Plazalar">
+          <Key>
+            <PropertyRef Name="PlazaNo" />
+          </Key>
+          <Property Name="PlazaNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PlazaAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PlazaKatSayisi" Type="Int32" />
+          <Property Name="Il" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Ilce" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="apimvcuygulamaEntities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Bloklars" EntityType="Self.Bloklar" />
+          <EntitySet Name="Görevler" EntityType="Self.Görevler" />
+          <EntitySet Name="Hizmetlers" EntityType="Self.Hizmetler" />
+          <EntitySet Name="Kullanicilars" EntityType="Self.Kullanicilar" />
+          <EntitySet Name="Personellers" EntityType="Self.Personeller" />
+          <EntitySet Name="Plazalars" EntityType="Self.Plazalar" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="apimvcuygulamaModelStoreContainer" CdmEntityContainer="apimvcuygulamaEntities3">
+          <EntitySetMapping Name="Bloklars">
+            <EntityTypeMapping TypeName="apimvcuygulamaModel.Bloklar">
+              <MappingFragment StoreEntitySet="Bloklar">
+                <ScalarProperty Name="BlokNo" ColumnName="BlokNo" />
+                <ScalarProperty Name="BlokAdi" ColumnName="BlokAdi" />
+                <ScalarProperty Name="BlokSayisi" ColumnName="BlokSayisi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Görevler">
+            <EntityTypeMapping TypeName="apimvcuygulamaModel.Görevler">
+              <MappingFragment StoreEntitySet="Görevler">
+                <ScalarProperty Name="GörevNo" ColumnName="GörevNo" />
+                <ScalarProperty Name="GörevTanimi" ColumnName="GörevTanimi" />
+                <ScalarProperty Name="Vardiya" ColumnName="Vardiya" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hizmetlers">
+            <EntityTypeMapping TypeName="apimvcuygulamaModel.Hizmetler">
+              <MappingFragment StoreEntitySet="Hizmetler">
+                <ScalarProperty Name="HizmetNo" ColumnName="HizmetNo" />
+                <ScalarProperty Name="HizmetAdi" ColumnName="HizmetAdi" />
+                <ScalarProperty Name="HizmetSüresi" ColumnName="HizmetSüresi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kullanicilars">
+            <EntityTypeMapping TypeName="apimvcuygulamaModel.Kullanicilar">
+              <MappingFragment StoreEntitySet="Kullanicilar">
+                <ScalarProperty Name="KullaniciNo" ColumnName="KullaniciNo" />
+                <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personellers">
+            <EntityTypeMapping TypeName="apimvcuygulamaModel.Personeller">
+              <MappingFragment StoreEntitySet="Personeller">
+                <ScalarProperty Name="PersonelNo" ColumnName="PersonelNo" />
+                <ScalarProperty Name="PersonelAdi" ColumnName="PersonelAdi" />
+                <ScalarProperty Name="PersonelSoyad" ColumnName="PersonelSoyad" />
+                <ScalarProperty Name="PersonelYas" ColumnName="PersonelYas" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Plazalars">
+            <EntityTypeMapping TypeName="apimvcuygulamaModel.Plazalar">
+              <MappingFragment StoreEntitySet="Plazalar">
+                <ScalarProperty Name="PlazaNo" ColumnName="PlazaNo" />
+                <ScalarProperty Name="PlazaAdi" ColumnName="PlazaAdi" />
+                <ScalarProperty Name="PlazaKatSayisi" ColumnName="PlazaKatSayisi" />
+                <ScalarProperty Name="Il" ColumnName="Il" />
+                <ScalarProperty Name="Ilce" ColumnName="Ilce" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
